@@ -56,7 +56,7 @@ class LogStash::Inputs::Kinesis < LogStash::Inputs::Base
   def register
     # the INFO log level is extremely noisy in KCL
     org.apache.commons.logging::LogFactory.getLog("com.amazonaws.services.kinesis").
-      logger.setLevel(java.util.logging::Level::WARNING)
+      logger.setLevel(org.apache.log4j.Level::WARN)
 
     worker_id = java.util::UUID.randomUUID.to_s
     creds = com.amazonaws.auth::DefaultAWSCredentialsProviderChain.new

@@ -2,7 +2,7 @@
 module Logstash
   module Input
     module Kinesis
-      VERSION = "1.5.0"
+      VERSION = "1.5.7"
     end
   end
 end
